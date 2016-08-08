@@ -11,7 +11,7 @@ class MasterMind
 
   # How many guesses have we done?
   def guess_count
-    guess_history.length
+    @guess_history.length
   end
 
   # Array of all previous guesses
@@ -51,7 +51,7 @@ class MasterMind
   # the result is [:miss, :exact_match, :miss, :inexact_match]
   #
   def guess(guess)
-    guess_history << guess
+    @guess_history << guess
 
     secret_dup = @secret.dup
     guess_dup  = guess.dup

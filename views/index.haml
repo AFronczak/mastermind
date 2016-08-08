@@ -1,0 +1,54 @@
+!!!
+%html
+  %head
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    %link{ :href => "/css/style.css", :rel => "stylesheet" }
+  %body
+  .board
+    %h1 Mastermind
+    .answers
+      %form{:action => "/guess", :method => "post" }
+        %select{:name => "color1"}
+          %option{:value => "Blue"} Blue
+          %option{:value => "Orange"} Orange
+          %option{:value => "Green"} Green
+          %option{:value => "Purple"} Purple
+          %option{:value => "Yellow"} Yellow
+          %option{:value => "Pink"} Pink
+        %select{:name => "color2"}
+          %option{:value => "Blue"} Blue
+          %option{:value => "Orange"} Orange
+          %option{:value => "Green"} Green
+          %option{:value => "Purple"} Purple
+          %option{:value => "Yellow"} Yellow
+          %option{:value => "Pink"} Pink
+        %select{:name => "color3"}
+          %option{:value => "Blue"} Blue
+          %option{:value => "Orange"} Orange
+          %option{:value => "Green"} Green
+          %option{:value => "Purple"} Purple
+          %option{:value => "Yellow"} Yellow
+          %option{:value => "Pink"} Pink
+        %select{:name => "color4"}
+          %option{:value => "Blue"} Blue
+          %option{:value => "Orange"} Orange
+          %option{:value => "Green"} Green
+          %option{:value => "Purple"} Purple
+          %option{:value => "Yellow"} Yellow
+          %option{:value => "Pink"} Pink
+        %button Submit!
+      %form{:action => "/restart", :method => "post" }
+        %button Restart
+    .wrapper
+      .guess_board
+        - $play.guess_history.each do |guess|
+          %ul.flexcontainer.answer
+            -guess.each do |color|
+              %li.flextitem
+                %img(src="/#{color}.png")
+      .results_board
+        - $play.result_history.each do |result|
+          %ul.flexcontainer.result
+            -result.each do |x|
+              %li
+                %img(src="/#{x}.gif")

@@ -1,0 +1,66 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.board {
+  margin: 0 auto;
+  border: 2px solid #bebebe;
+  border-radius: 10px;
+  padding: 0;
+  width: 450px;
+  height: 650px;
+}
+
+/*display selected answers horizontal*/
+.answers form {
+  align-content: center;
+  display: inline;
+  margin-bottom: 0;
+}
+.flexcontainer {
+  display:flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+/*answer marbles*/
+.answer {
+  padding: 0;
+}
+.result {
+  height: 54px;
+}
+.result li {
+  padding-top: 15px;
+}
+.flexitem {
+
+}
+.answers {
+  width: 500px;
+  margin: 0 auto;
+}
+.wrapper {
+  width: 425px;
+  margin: 0 auto;
+  display: flex;
+}
+.guess_board {
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0;
+}
+.results_board {
+  border-radius: 10px;
+}
+.results_board ul {
+  padding-left: 0;
+}
+h1 {
+    color: #bebebe;
+    margin: 0 auto;
+    text-align:center;
+}
