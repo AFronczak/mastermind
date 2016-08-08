@@ -4,6 +4,8 @@ require_relative "mastermind"
 require "sinatra/reloader" if development?
 #when you go to the root of this app, the only thing this should do is render the template.
 
+set :bind, '0.0.0.0' 
+
 $play = MasterMind.new
 
 get "/" do
