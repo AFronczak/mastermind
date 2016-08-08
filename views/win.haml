@@ -1,8 +1,13 @@
 !!!
 %html
   %head
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    %link{ :href => "/css/style.css", :rel => "stylesheet" }
   %body
-  %p You Win!
-  %p Try again
-  %form{:action => "/restart", :method => "post" }
-    %button Restart
+  .end
+    %h1 Mastermind
+    %img(src="/golden-crown.jpg" height="250px")
+    %p You Win!
+    %p Try again
+    %form{:action => "/restart", :method => "post" }
+      %button Restart

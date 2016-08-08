@@ -1,6 +1,9 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
+.end {
+  margin: 0 auto;
+}
 
 .board {
   margin: 0 auto;
